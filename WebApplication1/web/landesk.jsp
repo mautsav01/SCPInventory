@@ -36,7 +36,7 @@
  
   <form action="landesk1.jsp" method="get">
     <div class="input-group input-group-lg ">
-      <input type="text" class="form-control" placeholder="Search by Ip or Department or Hostname " name="searchitem">
+      <input type="text" class="form-control" placeholder="Search by Ip or Department or Username " name="searchitem">
       <div class="input-group-btn">
         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
       </div>
@@ -56,9 +56,8 @@
     <thead>
       <tr>
    
-        <th style="width:50px">S.No.</th>
+        
         <th style="width:130px">Department</th>
-        <th style="width:150px">HostName/Computer Name</th>
         <th style="width:130px">IP Address</th><th style="width:130px">username</th>
    <th style="width:130px">Edit/Delete</th>
    
@@ -80,11 +79,7 @@ while(res.next())
 
       <tr>
    
-          <TD>
-            <%=res.getInt("sn")%>
-        </td>
         <td> <%=res.getString("department")%></td>
-        <td> <%=res.getString("hostname")%></td>
         
         <td><%=res.getString("ip")%>
             <br>
@@ -108,7 +103,7 @@ while(res.next())
        
 
         </td>
-        <td> <%=res.getString("username")%><br>
+        <td> <%=res.getString("username")%><br><br><%=res.getString("password")%>
         <td> <a href="edit.jsp?value=<%=res.getInt("sn")%>">Update</a>
             <br><br>
             <a href="delete.jsp?value=<%=res.getInt("sn")%>">Delete</a>

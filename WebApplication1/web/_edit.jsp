@@ -24,7 +24,7 @@ String extension=request.getParameter("extension");
      Connection  cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/router", "root", "");
      
      PreparedStatement preparedStatement=null;
-     String updateTableSQL = "UPDATE reallandesk SET department=?,hostname=?,ip = ?,wannacry=?,username=?,password=?,landesk=? "
+     String updateTableSQL = "UPDATE reallandesk SET department=?,hostname=?,ip = ?,username=?,password=? "
 				                  + " WHERE sn = "+a+"";
 
 		try {
@@ -35,10 +35,10 @@ String extension=request.getParameter("extension");
     preparedStatement.setString(1, department);
       preparedStatement.setString(2, hostname);
       preparedStatement.setString(3,ip );
-      preparedStatement.setString(4, mobile);
-     preparedStatement.setString(5, username);
-      preparedStatement.setString(6, password);
-      preparedStatement.setString(7, extension);
+     // preparedStatement.setString(4, mobile);
+     preparedStatement.setString(4, username);
+      preparedStatement.setString(5, password);
+    //  preparedStatement.setString(7, extension);
      
 
 			// execute update SQL stetement

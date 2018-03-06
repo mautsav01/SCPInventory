@@ -34,7 +34,7 @@
    
         <th style="width:50px">S.No.</th>
         <th style="width:130px">Department</th>
-        <th style="width:150px">HostName/Computer Name</th>
+        
         <th style="width:130px">IP Address</th><th style="width:130px">username</th>
    <th style="width:130px">Edit/Delete</th>
    
@@ -48,7 +48,7 @@
        //  cn=DriverManager.getConnection("jdbc:mysql://192.168.10.7:3306/login","utsav","utsav");
      Connection  cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/router", "root", "");
      
-     String sql = "SELECT * FROM reallandesk WHERE department LIKE ? OR ip LIKE ? OR hostname LIKE ? ";
+     String sql = "SELECT * FROM reallandesk WHERE department LIKE ? OR ip LIKE ? OR username LIKE ? ";
 // ...
 PreparedStatement  preparedStatement = cn.prepareStatement(sql);
 preparedStatement.setString(1, "%" + msg + "%");
@@ -67,7 +67,7 @@ while (resultSet.next()){
     <td><%=resultSet.getString("department")%>
     </td>
             
-        <td><%=resultSet.getString("hostname")%></td>
+        
         <td><%=resultSet.getString("ip")%>
   <br>
         

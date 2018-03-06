@@ -80,16 +80,6 @@
       <input type="text" class="form-control"  placeholder="Users Password you use while logging in the computer" name="password">
     </div>
               
-   <div class="form-group">
-   <h1>In case of use</h1>
-      <label for="text">Mobile Number :</label>
-      <input type="text" class="form-control"  placeholder="Mobile Number official" name="mobile">
-    </div>
-              <div class="form-group">
-   
-      <label for="text">Extension number :</label>
-      <input type="text" class="form-control"  placeholder="Please enter extension number" name="extension">
-    </div>
    
    
    <button type="submit" class="btn btn-info btn-lg">Submit</button>
