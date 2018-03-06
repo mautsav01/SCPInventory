@@ -79,7 +79,14 @@
       <label for="text">User Password:</label>
       <input type="text" class="form-control"  placeholder="Users Password you use while logging in the computer" name="password">
     </div>
-              
+              <div class="form-group">
+      <label for="text">Email Address:</label>
+      <input type="text" class="form-control"  placeholder="Your Email Address" name="mail">
+    </div>  
+                <div class="form-group">
+                    <label for="text">EMail Password:</label>
+      <input type="text" class="form-control"  placeholder="Your Email Password" name="mailpassword">
+    </div>
    
    
    <button type="submit" class="btn btn-info btn-lg">Submit</button>

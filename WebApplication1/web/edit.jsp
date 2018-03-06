@@ -78,6 +78,17 @@ while(re.next()){
       <label for="text">User Password:</label>
       <input type="text" class="form-control"  placeholder="Users Password you use while logging in the computer" name="password"value="<%=re.getString("password")%>">
     </div>
+    
+              <div class="form-group">
+      <label for="text">Email Address:</label>
+      <input type="text" class="form-control"  placeholder="Users Password you use while logging in the computer" name="mail"value="<%=re.getString("mail")%>">
+    </div>
+    
+              <div class="form-group">
+      <label for="text">Email Password:</label>
+      <input type="text" class="form-control"  placeholder="Users Password you use while logging in the computer" name="mailpassword"value="<%=re.getString("mailpassword")%>">
+    </div>
+    
               
             
    

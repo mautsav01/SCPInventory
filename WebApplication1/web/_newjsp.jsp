@@ -24,6 +24,9 @@ String username=request.getParameter("username");
 
 String password=request.getParameter("password");
 
+String mail=request.getParameter("mail");
+
+String mailpassword=request.getParameter("mailpassword");
 
     try{
     
@@ -31,14 +34,15 @@ String password=request.getParameter("password");
            Class.forName("com.mysql.jdbc.Driver");
        //  cn=DriverManager.getConnection("jdbc:mysql://192.168.10.7:3306/login","utsav","utsav");
      Connection  cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/router", "root", "");
-     PreparedStatement pst=cn.prepareStatement ("Insert into reallandesk(department,hostname,ip,username,password) values (?,?,?,?,?)");
+     PreparedStatement pst=cn.prepareStatement ("Insert into reallandesk(department,hostname,ip,username,password,mail,mailpassword) values (?,?,?,?,?,?,?)");
       pst.setString(1, department);
       pst.setString(2, hostname);
       pst.setString(3,ip );
     //  pst.setString(4, mobile);
       pst.setString(4, username);
       pst.setString(5, password);
-    //  pst.setString(7, extension);
+    pst.setString(6, mail);
+    pst.setString(7, mailpassword);
      
       
       

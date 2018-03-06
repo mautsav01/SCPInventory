@@ -58,7 +58,7 @@
    
         
         <th style="width:130px">Department</th>
-        <th style="width:130px">IP Address</th><th style="width:130px">username</th>
+        <th style="width:130px">IP Address</th><th style="width:130px">Desktop username|     |Mail</th>
    <th style="width:130px">Edit/Delete</th>
    
       </tr>
@@ -103,11 +103,16 @@ while(res.next())
        
 
         </td>
-        <td> <%=res.getString("username")%><br><br><%=res.getString("password")%>
+        <td> <%=res.getString("username")%><%out.print("|  | ");%>
+            <i><%=res.getString("mail")%></i>
+            <br><br><%=res.getString("password")%><%out.print("| |");%>
+            <i><%=res.getString("mailpassword")%></i>
+            
         <td> <a href="edit.jsp?value=<%=res.getInt("sn")%>">Update</a>
             <br><br>
             <a href="delete.jsp?value=<%=res.getInt("sn")%>">Delete</a>
         </td>
+        
       
       </tr>
     

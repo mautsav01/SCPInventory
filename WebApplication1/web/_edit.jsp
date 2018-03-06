@@ -12,9 +12,9 @@ String username=request.getParameter("username");
 
 String password=request.getParameter("password");
 
-String mobile=request.getParameter("mobile");
+String mail=request.getParameter("mail");
 
-String extension=request.getParameter("extension");
+String mailpassword=request.getParameter("mailpassword");
 //out.print(a+department+hostname+ip+username+password+mobile);
     try{
     
@@ -24,7 +24,7 @@ String extension=request.getParameter("extension");
      Connection  cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/router", "root", "");
      
      PreparedStatement preparedStatement=null;
-     String updateTableSQL = "UPDATE reallandesk SET department=?,hostname=?,ip = ?,username=?,password=? "
+     String updateTableSQL = "UPDATE reallandesk SET department=?,hostname=?,ip = ?,username=?,password=?,mail=?,mailpassword=? "
 				                  + " WHERE sn = "+a+"";
 
 		try {
@@ -38,6 +38,10 @@ String extension=request.getParameter("extension");
      // preparedStatement.setString(4, mobile);
      preparedStatement.setString(4, username);
       preparedStatement.setString(5, password);
+      preparedStatement.setString(6, mail);
+      preparedStatement.setString(7, mailpassword);
+      
+      
     //  preparedStatement.setString(7, extension);
      
 
